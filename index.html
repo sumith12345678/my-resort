@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resort - Premium Vacation Rentals</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="bi bi-building"></i> My Resort
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="hero-title animate-fade-in">BOOK YOUR RESORT</h1>
+                            <p class="hero-subtitle animate-fade-in-delay">DISCOUNT UPTO 15% ON ALL PROPERTIES</p>
+                            <a href="#properties" class="btn btn-primary btn-lg mt-3 animate-fade-in-delay-2">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="hero-title animate-fade-in">BOOK YOUR RESORT</h1>
+                            <p class="hero-subtitle animate-fade-in-delay">DISCOUNT UPTO 15% ON ALL PROPERTIES</p>
+                            <a href="#properties" class="btn btn-primary btn-lg mt-3 animate-fade-in-delay-2">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="hero-title animate-fade-in">BOOK YOUR RESORT</h1>
+                            <p class="hero-subtitle animate-fade-in-delay">DISCOUNT UPTO 15% ON ALL PROPERTIES</p>
+                            <a href="#properties" class="btn btn-primary btn-lg mt-3 animate-fade-in-delay-2">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Images -->
+    <section class="location-section py-5" style="background-color: rgb(184, 184, 184);">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Popular Destinations</h2>
+            <div class="location-carousel-wrapper">
+                <button class="location-nav-btn prev-btn" id="locationPrev">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="location-carousel" id="locationCarousel">
+                    <div class="location-item">
+                        <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=400" alt="Bangalore">
+                        <div class="location-name">Bangalore</div>
+                    </div>
+                    <div class="location-item">
+                        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=400" alt="Mumbai">
+                        <div class="location-name">Mumbai</div>
+                    </div>
+                    <div class="location-item">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400" alt="Delhi">
+                        <div class="location-name">Delhi</div>
+                    </div>
+                    <div class="location-item">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400" alt="Goa">
+                        <div class="location-name">Goa</div>
+                    </div>
+                    <div class="location-item">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400" alt="Pune">
+                        <div class="location-name">Pune</div>
+                    </div>
+                    <div class="location-item">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400" alt="Hyderabad">
+                        <div class="location-name">Hyderabad</div>
+                    </div>
+                    <div class="location-item">
+                        <img src="https://images.unsplash.com/photo-1587330979470-3585acf0d5a9?w=400" alt="Kerala">
+                        <div class="location-name">Kerala</div>
+                    </div>
+                </div>
+                <button class="location-nav-btn next-btn" id="locationNext">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Amenities</h2>
+            <div class="amenities-carousel-wrapper">
+                <button class="amenities-nav-btn prev-btn" id="amenitiesPrev">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="amenities-carousel" id="amenitiesCarousel">
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-wifi"></i>
+                        </div>
+                        <h5>Free WiFi</h5>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-airplane"></i>
+                        </div>
+                        <h5>Airport Shuttle</h5>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-car-front"></i>
+                        </div>
+                        <h5>Free Parking</h5>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-water"></i>
+                        </div>
+                        <h5>Swimming Pool</h5>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-egg-fried"></i>
+                        </div>
+                        <h5>Restaurant</h5>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <h5>Spa & Wellness</h5>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <h5>Business Center</h5>
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5>24/7 Security</h5>
+                    </div>
+                </div>
+                <button class="amenities-nav-btn next-btn" id="amenitiesNext">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Vacation Homes -->
+    <section class="properties-section py-5" id="properties">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Featured Vacation Homes</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Property">
+                            <div class="property-badge">Featured</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Luxury Beach Villa</h4>
+                            <p class="property-location"><i class="bi bi-geo-alt"></i> Goa, India</p>
+                            <div class="property-features">
+                                <span><i class="bi bi-door-open"></i> 4 Beds</span>
+                                <span><i class="bi bi-car-front"></i> 4 Cars</span>
+                                <span><i class="bi bi-house"></i> 4 Rooms</span>
+                            </div>
+                            <div class="property-price">
+                                <span class="price">₹8,999</span>
+                                <span class="price-label">/night</span>
+                            </div>
+                            <a href="details.html" class="btn btn-primary w-100 mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="Property">
+                            <div class="property-badge">New</div>
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Mountain View Resort</h4>
+                            <p class="property-location"><i class="bi bi-geo-alt"></i> Manali, India</p>
+                            <div class="property-features">
+                                <span><i class="bi bi-door-open"></i> 3 Beds</span>
+                                <span><i class="bi bi-car-front"></i> 2 Cars</span>
+                                <span><i class="bi bi-house"></i> 3 Rooms</span>
+                            </div>
+                            <div class="property-price">
+                                <span class="price">₹6,499</span>
+                                <span class="price-label">/night</span>
+                            </div>
+                            <a href="details.html" class="btn btn-primary w-100 mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Modern City Apartment</h4>
+                            <p class="property-location"><i class="bi bi-geo-alt"></i> Bangalore, India</p>
+                            <div class="property-features">
+                                <span><i class="bi bi-door-open"></i> 2 Beds</span>
+                                <span><i class="bi bi-car-front"></i> 1 Car</span>
+                                <span><i class="bi bi-house"></i> 2 Rooms</span>
+                            </div>
+                            <div class="property-price">
+                                <span class="price">₹4,999</span>
+                                <span class="price-label">/night</span>
+                            </div>
+                            <a href="details.html" class="btn btn-primary w-100 mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Urban Homes -->
+    <section class="properties-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Featured Urban Homes</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Downtown Loft</h4>
+                            <p class="property-location"><i class="bi bi-geo-alt"></i> Mumbai, India</p>
+                            <div class="property-features">
+                                <span><i class="bi bi-door-open"></i> 2 Beds</span>
+                                <span><i class="bi bi-car-front"></i> 1 Car</span>
+                                <span><i class="bi bi-house"></i> 2 Rooms</span>
+                            </div>
+                            <div class="property-price">
+                                <span class="price">₹5,499</span>
+                                <span class="price-label">/night</span>
+                            </div>
+                            <a href="details.html" class="btn btn-primary w-100 mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Skyline Penthouse</h4>
+                            <p class="property-location"><i class="bi bi-geo-alt"></i> Delhi, India</p>
+                            <div class="property-features">
+                                <span><i class="bi bi-door-open"></i> 3 Beds</span>
+                                <span><i class="bi bi-car-front"></i> 2 Cars</span>
+                                <span><i class="bi bi-house"></i> 3 Rooms</span>
+                            </div>
+                            <div class="property-price">
+                                <span class="price">₹9,999</span>
+                                <span class="price-label">/night</span>
+                            </div>
+                            <a href="details.html" class="btn btn-primary w-100 mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=800" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h4 class="property-title">Garden View Studio</h4>
+                            <p class="property-location"><i class="bi bi-geo-alt"></i> Pune, India</p>
+                            <div class="property-features">
+                                <span><i class="bi bi-door-open"></i> 1 Bed</span>
+                                <span><i class="bi bi-car-front"></i> 1 Car</span>
+                                <span><i class="bi bi-house"></i> 1 Room</span>
+                            </div>
+                            <div class="property-price">
+                                <span class="price">₹3,999</span>
+                                <span class="price-label">/night</span>
+                            </div>
+                            <a href="details.html" class="btn btn-primary w-100 mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Real People, Real Reviews</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="User" class="review-avatar">
+                            <div class="review-info">
+                                <h5>Rajesh Kumar</h5>
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Amazing experience! The property was exactly as described. Clean, comfortable, and in a great location. Highly recommended!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://i.pravatar.cc/150?img=2" alt="User" class="review-avatar">
+                            <div class="review-info">
+                                <h5>Priya Sharma</h5>
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Perfect stay for our family vacation. The amenities were top-notch and the staff was very helpful. Will definitely book again!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://i.pravatar.cc/150?img=3" alt="User" class="review-avatar">
+                            <div class="review-info">
+                                <h5>Amit Patel</h5>
+                                <div class="review-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Great value for money. The property was spacious and well-maintained. The location was convenient with easy access to major attractions."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="bi bi-building"></i> My Resort</h5>
+                    <p>Your trusted partner for premium vacation rentals. Experience luxury and comfort like never before.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <p class="text-white-50">
+                        <i class="bi bi-envelope"></i> info@myresort.com<br>
+                        <i class="bi bi-phone"></i> +91 123 456 7890
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 My Resort. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
